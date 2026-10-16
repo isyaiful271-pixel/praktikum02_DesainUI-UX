@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pemesanan Barang</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    nav {
+      border: solid black 3px;
+      display: flex;
+      justify-content: space-around;
+      padding: 5px;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+    }
+    article {
+      margin: 20px 10px;
+    }
+    article section {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    article section .foto-barang .foto {
+      width: 200px;
+      height: 200px;
+      border: solid black 3px;
+    }
+    article section .foto-barang button {
+      margin-top: 10px;
+      width: 100px;
+      height: 30px;
+      border: solid black 3px;
+    }
+    article section .form-barang form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    article section .form-barang form .input-field {
+      padding: 10px;
+    }
+    article section .form-barang form .input-field label {
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    article section .form-barang form .input-field input,
+    textarea,
+    select {
+      border: solid black 3px;
+    }
+    article section .form-barang form .checkbox-group input[type="checkbox"] {
+      accent-color: green;
+    }
+    article section .form-barang form .checkbox-group label {
+      font-family: Arial, Helvetica, sans-serif;
+      color: green;
+    }
+    article section .form-barang form .input-field button {
+      width: 150px;
+      height: 30px;
+      border: none;
+      border: solid black 3px;
+      background-color: green;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <nav>
+      <a href="#">Home |</a>
+      <a href="#">Generate Link |</a>
+      <a href="#">Transaction History |</a>
+      <a href="#">Policy |</a>
+      <a href="#">Logout </a>
+    </nav>
+    <article>
+      <section>
+        <div class="foto-barang">
+          <div class="foto"></div>
+          <button>Upload Foto</button>
+        </div>
+        <div class="form-barang">
+          <form action="hasil.html">
+            <div class="input-field">
+              <label for="title">Title Here: </label>
+              <input type="text" id="title" name="title" required />
+            </div>
+            <div class="input-field">
+              <label for="description">Description: </label>
+              <textarea
+                id="description"
+                name="description"
+                rows="4"
+                cols="50"
+                required
+              ></textarea>
+            </div>
+            <div class="input-field">
+              <label for="account-number">Account Number: </label>
+              <input
+                type="text"
+                id="account-number"
+                name="account-number"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <label for="bank">Bank:</label>
+              <select id="bank" name="bank" required>
+                <option value="bca">BCA</option>
+                <option value="bni">BNI</option>
+                <option value="mandiri">Mandiri</option>
+                <option value="bri">BRI</option>
+              </select>
+            </div>
+            <div class="input-field">
+              <label for="account-holder">Account Holder: </label>
+              <input
+                type="text"
+                id="account-holder"
+                name="account-holder"
+                placeholder="Name Here"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <label for="transaction">Transaction: </label>
+              <input
+                type="number"
+                id="transaction"
+                name="transaction"
+                min="1"
+                max="3"
+                required
+              />
+            </div>
+            <p>
+              <sup>*</sup> if the transaction is for 3 person, choose 3 from the
+              drop-down list
+            </p>
+            <div class="checkbox-group">
+              <input type="checkbox" name="mobile" id="mobile" />
+              <label for="mobile">Send to Mobile Phone</label> <br />
+              <input type="checkbox" name="email" id="email" />
+              <label for="email">Send to Email</label>
+            </div>
+            <div class="input-field">
+              <button type="submit">Generate Nabr Link</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </article>
+  </body>
+</html> 
